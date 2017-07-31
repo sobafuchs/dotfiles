@@ -46,6 +46,12 @@ set lazyredraw
 set ttyfast
 syntax enable
 
+
+" -----------------
+"  Copy Paste Config
+" -----------------
+set clipboard=unnamed
+
 " -----------------
 "  Syntastic Config
 " -----------------
