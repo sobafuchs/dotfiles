@@ -11,10 +11,26 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'Raimondi/delimitMate'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+Plugin 'flazz/vim-colorschemes'
 " End Vundle
 call vundle#end()
 
 filetype plugin indent on
+
+" -----------------
+"  Key Mappings
+"  ----------------
+map <C-n> :NERDTreeToggle<CR>
 
 " -----------------
 " Spacing / Indentation
@@ -36,13 +52,26 @@ syntax enable
 let g:syntastic_enable_signs=1 
 let g:syntastic_auto_jump=1
 let g:syntastic_javascript_checkers=['eslint']
-
+let g:javascript_plugin_jsdoc=1
+let g:jsx_ext_required = 0
 " -----------------
 "  Font
 " -----------------
-set guifont=Monospace:h20
+set guifont=Monaco:h30
 
 " -----------------
 " Color Schema
 " -----------------
-colorscheme base16-codeschool
+
+colorscheme afterglow 
+
+" ----------------
+"  Line Numbers
+" ----------------
+set number
+
+" ----------------
+"  emmet-vim config
+" ----------------
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,eruby EmmetInstall
